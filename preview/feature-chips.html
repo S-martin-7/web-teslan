@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Feature chips (dark)</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  html,body{margin:0;padding:0;background:var(--bg-dark);font-family:var(--font-sans);}
+  .wrap{padding:var(--s-5);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3);}
+  .chip{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--r-md);padding:var(--s-4);display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+  .ic{width:36px;height:36px;border-radius:8px;background:rgba(43,196,217,0.15);color:var(--teslan-cyan-500);display:flex;align-items:center;justify-content:center;}
+  .chip b{color:#fff;font-size:13px;line-height:1.2;}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="chip"><div class="ic"><i data-lucide="map-pin"></i></div><b>Cobertura en el norte de Chile</b></div>
+  <div class="chip"><div class="ic"><i data-lucide="file-text"></i></div><b>Infraestructura física y conectividad</b></div>
+  <div class="chip"><div class="ic"><i data-lucide="share-2"></i></div><b>Proyectos multi-sitio</b></div>
+  <div class="chip"><div class="ic"><i data-lucide="hard-hat"></i></div><b>Ejecución en terreno</b></div>
+</div>
+<script>lucide.createIcons();</script>
+</body></html>

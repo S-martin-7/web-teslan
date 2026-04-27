@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Logo — Teslan</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg-soft);font-family:var(--font-sans);}
+  .card{padding:var(--s-6);display:grid;grid-template-columns:1.1fr 1fr;gap:var(--s-6);align-items:center;min-height:180px;}
+  .swatch{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--s-6);display:flex;align-items:center;justify-content:center;min-height:140px;}
+  .swatch.dark{background:var(--bg-dark);border-color:transparent;}
+  .swatch img{max-width:100%;height:auto;max-height:110px;display:block;}
+  .row{display:flex;gap:var(--s-4);}
+  .row>div{flex:1;}
+</style></head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="swatch"><img src="../assets/logo-teslan.png" alt="Teslan logo primary"></div>
+    <div class="swatch dark"><img src="../assets/logo-teslan.png" alt="Teslan logo on dark" style="filter:brightness(1.15);"></div>
+  </div>
+  <div>
+    <div class="eyebrow" style="margin-bottom:8px;">Marca / Logo</div>
+    <h3 style="margin-bottom:6px;">Teslan wordmark</h3>
+    <p class="small" style="margin:0 0 10px;">Primary mark with gradient blue wordmark and the swoosh underline. Tagline below: <em>SERVICIOS · TELECOMUNICACIONES · SEGURIDAD</em>.</p>
+    <p class="small" style="margin:0;color:var(--fg-muted);">Minimum width: 120px. Clear space = height of the "T".</p>
+  </div>
+</div>
+</body></html>

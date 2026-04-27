@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Hero preview</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:#000;font-family:var(--font-sans);}
+  .hero{position:relative;min-height:300px;overflow:hidden;}
+  .bg{position:absolute;inset:0;background:url('https://images.pexels.com/photos/442152/pexels-photo-442152.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;}
+  .wash{position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,42,107,0.92) 0%,rgba(18,58,143,0.82) 50%,rgba(43,196,217,0.45) 100%);}
+  .content{position:relative;z-index:2;padding:var(--s-6) var(--s-8);color:#fff;max-width:560px;}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#86E0EA;margin-bottom:10px;}
+  .content h1{color:#fff;font-size:32px;line-height:1.1;margin:0 0 10px;font-weight:800;letter-spacing:-0.02em;}
+  .content h1 span{background:linear-gradient(90deg,#fff 0%,#86E0EA 55%,#2BC4D9 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+  .content p{font-size:13px;color:rgba(255,255,255,0.85);margin:0 0 14px;line-height:1.55;}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;}
+  .btn{padding:10px 18px;border-radius:var(--r-pill);font-weight:600;font-size:13px;border:0;font-family:inherit;cursor:pointer;}
+  .p1{background:var(--accent-orange-600);color:#fff;box-shadow:var(--sh-cta);}
+  .p2{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4);}
+</style></head>
+<body>
+<div class="hero">
+  <div class="bg"></div>
+  <div class="wash"></div>
+  <div class="content">
+    <div class="eyebrow">Norte de Chile · Proyectos en terreno</div>
+    <h1>Infraestructura y <span>despliegue técnico</span> para proyectos en terreno</h1>
+    <p>Teslan desarrolla soluciones de infraestructura física, conectividad y seguridad para plantas, recintos y sitios remotos del norte de Chile.</p>
+    <div class="btns"><button class="btn p1">Solicitar evaluación</button><button class="btn p2">Ver servicios</button></div>
+  </div>
+</div>
+</body></html>

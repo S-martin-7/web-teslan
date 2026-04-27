@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Semantic colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);}
+  .wrap{padding:var(--s-5);}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3);}
+  .tok{border:1px solid var(--border);border-radius:var(--r-md);padding:var(--s-3);display:flex;gap:var(--s-3);align-items:center;}
+  .dot{width:28px;height:28px;border-radius:8px;flex-shrink:0;}
+  .tok b{font-size:13px;display:block;line-height:1.2;}
+  .tok span{font-family:var(--font-mono);font-size:10px;color:var(--fg-muted);}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="grid">
+    <div class="tok"><div class="dot" style="background:#1FA855"></div><div><b>Success</b><span>--status-success</span></div></div>
+    <div class="tok"><div class="dot" style="background:#E8A627"></div><div><b>Warning</b><span>--status-warning</span></div></div>
+    <div class="tok"><div class="dot" style="background:#D64545"></div><div><b>Danger</b><span>--status-danger</span></div></div>
+    <div class="tok"><div class="dot" style="background:#3A86E8"></div><div><b>Info</b><span>--status-info</span></div></div>
+  </div>
+</div>
+</body></html>

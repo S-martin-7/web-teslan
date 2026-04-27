@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Button states</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);}
+  .wrap{padding:var(--s-5);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3);align-items:center;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:var(--r-pill);font-weight:600;font-size:14px;border:0;font-family:inherit;width:100%;}
+  .primary{background:var(--accent-orange-600);color:#fff;box-shadow:var(--sh-cta);}
+  .hover{background:var(--accent-orange-700);color:#fff;box-shadow:var(--sh-cta);}
+  .active{background:var(--accent-orange-700);color:#fff;transform:scale(0.96);box-shadow:var(--sh-sm);}
+  .disabled{background:var(--neutral-200);color:var(--neutral-400);cursor:not-allowed;}
+  .lbl{text-align:center;font-size:11px;color:var(--fg-muted);font-family:var(--font-mono);margin-top:4px;}
+  .col{display:flex;flex-direction:column;gap:4px;}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="col"><button class="btn primary">Solicitar</button><div class="lbl">rest</div></div>
+  <div class="col"><button class="btn hover">Solicitar</button><div class="lbl">hover</div></div>
+  <div class="col"><button class="btn active">Solicitar</button><div class="lbl">active · scale 0.96</div></div>
+  <div class="col"><button class="btn disabled">Solicitar</button><div class="lbl">disabled</div></div>
+</div>
+</body></html>

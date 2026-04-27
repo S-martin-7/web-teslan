@@ -1,0 +1,253 @@
+/* =========================================================================
+   TESLAN — Colors & Type tokens
+   Servicios · Telecomunicaciones · Seguridad
+   ========================================================================= */
+
+/* -- Fonts ------------------------------------------------------------------
+   The provided mockup uses a humanist sans in the family of Source Sans Pro /
+   Open Sans for body and a slightly bolder cut for headlines. The logo
+   wordmark itself is a rounded italic script (custom / bespoke — not used as
+   UI type). Until the client delivers a licensed typeface we use a
+   Google-Fonts substitution:
+     Headlines/UI: "Inter"      (flagged substitution for a neutral grotesk)
+     Body:         "Inter"
+     Mono:         "JetBrains Mono"
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ---------- Brand — Teslan Blue gradient ---------- */
+  --teslan-blue-900: #0A2A6B;   /* deepest tower-blue, used in logo shadow */
+  --teslan-blue-800: #123A8F;
+  --teslan-blue-700: #1B52C2;   /* primary "Teslan blue" — wordmark core */
+  --teslan-blue-600: #2166D8;
+  --teslan-blue-500: #3A86E8;   /* link / active */
+  --teslan-blue-400: #6AB0EE;
+  --teslan-blue-300: #9AD3F4;
+  --teslan-cyan-500: #2BC4D9;   /* right side of logo gradient */
+  --teslan-cyan-400: #4FD3E3;
+  --teslan-cyan-300: #86E0EA;
+
+  /* The signature gradient of the wordmark — used for hero washes, accents */
+  --teslan-gradient:
+    linear-gradient(95deg, var(--teslan-blue-900) 0%, var(--teslan-blue-700) 45%, var(--teslan-cyan-500) 100%);
+  --teslan-gradient-soft:
+    linear-gradient(95deg, rgba(10,42,107,0.92) 0%, rgba(27,82,194,0.88) 50%, rgba(43,196,217,0.82) 100%);
+
+  /* ---------- Accent — operational orange (CTA) ---------- */
+  --accent-orange-700: #D9621A;
+  --accent-orange-600: #E87824;  /* primary CTA */
+  --accent-orange-500: #F08A36;
+  --accent-orange-400: #F6A260;
+
+  /* ---------- Support — WhatsApp / success green ---------- */
+  --support-green-600: #1FA855;  /* WhatsApp button / active status */
+  --support-green-500: #25D366;
+  --support-green-300: #9BE7B8;
+
+  /* ---------- Neutrals (warm-cool grey) ---------- */
+  --neutral-0:   #FFFFFF;
+  --neutral-50:  #F7F9FC;   /* page background - soft */
+  --neutral-100: #EEF2F7;   /* section alt, card separator */
+  --neutral-200: #DDE3EC;   /* borders */
+  --neutral-300: #BDC6D2;
+  --neutral-400: #8A95A4;
+  --neutral-500: #5E6876;   /* body secondary */
+  --neutral-600: #404A59;
+  --neutral-700: #2B3340;   /* body default on light */
+  --neutral-800: #1B2130;
+  --neutral-900: #0F1320;   /* near-black, used behind hero imagery */
+
+  /* ---------- Semantic — foreground / background roles ---------- */
+  --bg:            var(--neutral-0);
+  --bg-soft:       var(--neutral-50);
+  --bg-alt:        var(--neutral-100);
+  --bg-dark:       var(--neutral-900);
+  --bg-brand:      var(--teslan-blue-900);
+
+  --fg:            var(--neutral-800);   /* default body */
+  --fg-strong:     var(--neutral-900);   /* headings on light */
+  --fg-muted:      var(--neutral-500);
+  --fg-subtle:     var(--neutral-400);
+  --fg-on-dark:    var(--neutral-0);
+  --fg-on-brand:   var(--neutral-0);
+  --fg-link:       var(--teslan-blue-600);
+
+  --border:        var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --border-on-dark: rgba(255,255,255,0.14);
+
+  /* ---------- Semantic — status ---------- */
+  --status-success: var(--support-green-600);
+  --status-warning: #E8A627;
+  --status-danger:  #D64545;
+  --status-info:    var(--teslan-blue-500);
+
+  /* ---------- Type families ---------- */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif; /* same family, heavier weight */
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+
+  /* ---------- Type scale ---------- */
+  --fs-display: 56px;  --lh-display: 1.05;  --tr-display: -0.02em;
+  --fs-h1:      40px;  --lh-h1:      1.1;   --tr-h1:      -0.015em;
+  --fs-h2:      30px;  --lh-h2:      1.15;  --tr-h2:      -0.01em;
+  --fs-h3:      22px;  --lh-h3:      1.25;  --tr-h3:      -0.005em;
+  --fs-h4:      18px;  --lh-h4:      1.3;   --tr-h4:       0;
+  --fs-lead:    18px;  --lh-lead:    1.55;
+  --fs-body:    16px;  --lh-body:    1.6;
+  --fs-small:   14px;  --lh-small:   1.5;
+  --fs-micro:   12px;  --lh-micro:   1.4;   --tr-micro:    0.06em;
+
+  /* ---------- Spacing (4px base) ---------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+
+  /* ---------- Radii ---------- */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;   /* cards, inputs */
+  --r-xl: 20px;   /* hero cards, pill buttons */
+  --r-2xl: 28px;
+  --r-pill: 999px;
+
+  /* ---------- Shadows ---------- */
+  --sh-xs: 0 1px 2px rgba(15,19,32,0.06);
+  --sh-sm: 0 2px 6px rgba(15,19,32,0.08);
+  --sh-md: 0 6px 18px rgba(15,19,32,0.10);
+  --sh-lg: 0 16px 40px rgba(15,19,32,0.14);
+  --sh-brand: 0 10px 30px rgba(27,82,194,0.25);
+  --sh-cta:   0 10px 24px rgba(232,120,36,0.35);
+
+  /* ---------- Motion ---------- */
+  --ease-standard: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ease-emphasis: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 120ms;
+  --dur-med: 220ms;
+  --dur-slow: 420ms;
+
+  /* ---------- Layout ---------- */
+  --container: 1200px;
+  --container-narrow: 880px;
+}
+
+/* =========================================================================
+   Semantic element styles (h1..p, mono, lead, eyebrow, etc.)
+   ========================================================================= */
+
+html { color: var(--fg); background: var(--bg); }
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: var(--fg);
+}
+
+.display, h1.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tr-display);
+  color: var(--fg-strong);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--tr-h1);
+  color: var(--fg-strong);
+  margin: 0 0 var(--s-4);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--tr-h2);
+  color: var(--fg-strong);
+  margin: 0 0 var(--s-4);
+}
+
+h3 {
+  font-weight: 700;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  letter-spacing: var(--tr-h3);
+  color: var(--fg-strong);
+  margin: 0 0 var(--s-3);
+}
+
+h4 {
+  font-weight: 600;
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+  color: var(--fg-strong);
+  margin: 0 0 var(--s-2);
+}
+
+p { margin: 0 0 var(--s-4); }
+
+.lead {
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: var(--neutral-600);
+}
+
+.eyebrow {
+  font-size: var(--fs-micro);
+  line-height: var(--lh-micro);
+  letter-spacing: var(--tr-micro);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--fg-muted);
+}
+
+small, .small {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  color: var(--fg-muted);
+}
+
+code, kbd, pre, samp {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+a {
+  color: var(--fg-link);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+a:hover { color: var(--teslan-blue-700); text-decoration: underline; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: var(--s-8) 0;
+}
+
+/* Gradient text utility — the brand's signature treatment */
+.text-gradient {
+  background: var(--teslan-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}

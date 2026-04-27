@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Badges / chips</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);}
+  .wrap{padding:var(--s-5);display:flex;gap:var(--s-2);flex-wrap:wrap;align-items:center;}
+  .badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:var(--r-pill);font-size:12px;font-weight:600;}
+  .dot{width:6px;height:6px;border-radius:50%;}
+  .b-brand{background:rgba(27,82,194,0.1);color:var(--teslan-blue-700);}
+  .b-success{background:rgba(31,168,85,0.12);color:var(--support-green-600);}
+  .b-warn{background:rgba(232,166,39,0.15);color:#9A6C0F;}
+  .b-danger{background:rgba(214,69,69,0.12);color:var(--status-danger);}
+  .b-neutral{background:var(--neutral-100);color:var(--neutral-700);}
+  .b-solid{background:var(--accent-orange-600);color:#fff;}
+</style></head>
+<body>
+<div class="wrap">
+  <span class="badge b-brand"><span class="dot" style="background:var(--teslan-blue-700)"></span>Activo</span>
+  <span class="badge b-success"><span class="dot" style="background:var(--support-green-600)"></span>Operativo</span>
+  <span class="badge b-warn"><span class="dot" style="background:#E8A627"></span>En revisión</span>
+  <span class="badge b-danger"><span class="dot" style="background:var(--status-danger)"></span>Fuera de línea</span>
+  <span class="badge b-neutral">Antofagasta</span>
+  <span class="badge b-neutral">Fibra óptica</span>
+  <span class="badge b-solid">Nuevo</span>
+</div>
+</body></html>

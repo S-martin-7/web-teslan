@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Service cards</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  html,body{margin:0;padding:0;background:var(--bg-soft);font-family:var(--font-sans);}
+  .wrap{padding:var(--s-5);display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-4);}
+  .card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--s-5);position:relative;overflow:hidden;}
+  .card::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:48px;background:var(--accent-orange-600);border-radius:0 3px 0 0;}
+  .icon{width:44px;height:44px;border-radius:10px;background:rgba(27,82,194,0.08);display:flex;align-items:center;justify-content:center;color:var(--teslan-blue-700);margin-bottom:12px;}
+  .card h4{margin:0 0 6px;font-size:15px;}
+  .card p{margin:0;font-size:13px;color:var(--fg-muted);line-height:1.5;}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="icon"><i data-lucide="radio-tower"></i></div>
+    <h4>Infraestructura y montaje</h4>
+    <p>Montaje de torres, estructuras, soportes, gabinetes y canalización.</p>
+  </div>
+  <div class="card">
+    <div class="icon"><i data-lucide="cable"></i></div>
+    <h4>Cableado y fibra óptica</h4>
+    <p>Cableado estructurado, tendido de fibra, fusiones y terminaciones.</p>
+  </div>
+  <div class="card">
+    <div class="icon"><i data-lucide="video"></i></div>
+    <h4>CCTV y seguridad en recintos</h4>
+    <p>Cámaras, NVR, perímetros y zonas críticas.</p>
+  </div>
+</div>
+<script>lucide.createIcons();</script>
+</body></html>

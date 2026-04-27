@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Shadows</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg-soft);font-family:var(--font-sans);}
+  .wrap{padding:var(--s-6);display:grid;grid-template-columns:repeat(6,1fr);gap:var(--s-4);}
+  .card{background:#fff;border-radius:var(--r-lg);aspect-ratio:1/0.9;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--s-3);}
+  .lbl{font-family:var(--font-mono);font-size:10px;color:var(--fg-muted);}
+  .nm{font-weight:600;font-size:12px;color:var(--fg);}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="card" style="box-shadow:var(--sh-xs)"><div class="nm">xs</div><div class="lbl">1·2 · 6%</div></div>
+  <div class="card" style="box-shadow:var(--sh-sm)"><div class="nm">sm</div><div class="lbl">2·6 · 8%</div></div>
+  <div class="card" style="box-shadow:var(--sh-md)"><div class="nm">md</div><div class="lbl">6·18 · 10%</div></div>
+  <div class="card" style="box-shadow:var(--sh-lg)"><div class="nm">lg</div><div class="lbl">16·40 · 14%</div></div>
+  <div class="card" style="box-shadow:var(--sh-brand)"><div class="nm">brand</div><div class="lbl">blue 25%</div></div>
+  <div class="card" style="box-shadow:var(--sh-cta)"><div class="nm">cta</div><div class="lbl">orange 35%</div></div>
+</div>
+</body></html>

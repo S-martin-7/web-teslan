@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Imagery — mockup categories</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);}
+  .wrap{padding:var(--s-4);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3);}
+  .ph{aspect-ratio:4/3;border-radius:var(--r-md);overflow:hidden;position:relative;background:#1B2130;}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block;}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.6) 100%);pointer-events:none;}
+  .cap{position:absolute;left:10px;right:10px;bottom:8px;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.02em;z-index:2;line-height:1.25;}
+</style></head>
+<body>
+<div class="wrap">
+  <!-- 1. Infraestructura y montaje — telecom tower (Pexels) -->
+  <div class="ph">
+    <img src="https://images.pexels.com/photos/442152/pexels-photo-442152.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Torre de telecomunicaciones" loading="lazy"/>
+    <div class="cap">Infraestructura<br>y montaje</div>
+  </div>
+  <!-- 2. Cableado y fibra óptica -->
+  <div class="ph">
+    <img src="https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Fibra óptica" loading="lazy"/>
+    <div class="cap">Cableado y<br>fibra óptica</div>
+  </div>
+  <!-- 3. CCTV y seguridad en recintos -->
+  <div class="ph">
+    <img src="https://images.pexels.com/photos/96612/pexels-photo-96612.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Cámara CCTV" loading="lazy"/>
+    <div class="cap">CCTV y seguridad<br>en recintos</div>
+  </div>
+  <!-- 4. Enlaces y despliegue multi-sitio -->
+  <div class="ph">
+    <img src="https://images.pexels.com/photos/45170/kahle-alps-mountains-dish-antenna-45170.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Antena de enlace" loading="lazy"/>
+    <div class="cap">Enlaces y<br>despliegue multi-sitio</div>
+  </div>
+</div>
+</body></html>

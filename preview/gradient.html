@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Brand gradient</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg);font-family:var(--font-sans);}
+  .wrap{padding:var(--s-6);}
+  .bar{height:96px;border-radius:var(--r-lg);background:var(--teslan-gradient);position:relative;overflow:hidden;}
+  .stops{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-3);margin-top:var(--s-4);}
+  .stop{display:flex;align-items:center;gap:var(--s-3);font-size:13px;}
+  .chip{width:36px;height:36px;border-radius:8px;flex-shrink:0;border:1px solid var(--border);}
+  .mono{font-family:var(--font-mono);font-size:12px;color:var(--fg-muted);}
+  h4{margin:0 0 2px;font-size:14px;}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="bar"></div>
+  <div class="stops">
+    <div class="stop"><div class="chip" style="background:#0A2A6B"></div><div><h4>Navy 900</h4><div class="mono">#0A2A6B</div></div></div>
+    <div class="stop"><div class="chip" style="background:#1B52C2"></div><div><h4>Blue 700</h4><div class="mono">#1B52C2</div></div></div>
+    <div class="stop"><div class="chip" style="background:#2BC4D9"></div><div><h4>Cyan 500</h4><div class="mono">#2BC4D9</div></div></div>
+  </div>
+</div>
+</body></html>
