@@ -14,7 +14,7 @@ function ServicesGrid() {
         </div>
         <div style={sgStyles.grid}>
           {services.map(s => (
-            <article key={s.title} style={sgStyles.card}>
+            <article key={s.title} className="motion-card" style={sgStyles.card}>
               <div style={{...sgStyles.img, backgroundImage: `url(${s.img})`}} />
               <div style={sgStyles.body}>
                 <h3 style={sgStyles.cardTitle}>{s.title}</h3>

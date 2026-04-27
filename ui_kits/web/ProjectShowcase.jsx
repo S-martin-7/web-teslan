@@ -13,7 +13,7 @@ function ProjectShowcase() {
         </div>
         <div style={psStyles.grid}>
           {projects.map(p => (
-            <article key={p.title} style={psStyles.card}>
+            <article key={p.title} className="motion-card" style={psStyles.card}>
               <div style={{...psStyles.img, backgroundImage: `url(${p.img})`}} />
               <div style={psStyles.body}>
                 <h3 style={psStyles.title}>{p.title}</h3>

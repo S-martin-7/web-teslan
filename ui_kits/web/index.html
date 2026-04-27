@@ -9,6 +9,70 @@
     body { margin: 0; background: #fff; }
     * { box-sizing: border-box; }
     button:hover { filter: brightness(1.05); }
+    .hero-network {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.72;
+      mix-blend-mode: screen;
+    }
+    .hero-network path {
+      stroke-dasharray: 10 18;
+      animation: teslan-dash 14s linear infinite;
+    }
+    .hero-network circle {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: teslan-pulse 3.6s ease-in-out infinite;
+    }
+    .hero-network circle:nth-of-type(2n) { animation-delay: 0.7s; }
+    .hero-network circle:nth-of-type(3n) { animation-delay: 1.4s; }
+    .signal-ring {
+      animation: teslan-ring 3s ease-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .map-route {
+      stroke-dasharray: 420;
+      stroke-dashoffset: 420;
+      animation: teslan-draw 4.6s var(--ease-emphasis) infinite alternate;
+    }
+    .map-node {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: teslan-map-pulse 2.6s ease-in-out infinite;
+    }
+    .map-node:nth-of-type(2n) { animation-delay: 0.45s; }
+    .map-node:nth-of-type(3n) { animation-delay: 0.9s; }
+    .motion-card {
+      transition: transform var(--dur-med) var(--ease-standard), box-shadow var(--dur-med) var(--ease-standard), border-color var(--dur-med) var(--ease-standard);
+    }
+    .motion-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--sh-lg);
+      border-color: rgba(43,196,217,0.35);
+    }
+    @keyframes teslan-dash {
+      to { stroke-dashoffset: -280; }
+    }
+    @keyframes teslan-pulse {
+      0%, 100% { opacity: 0.35; transform: scale(0.92); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+    @keyframes teslan-ring {
+      0% { opacity: 0.6; transform: scale(0.7); }
+      100% { opacity: 0; transform: scale(1.9); }
+    }
+    @keyframes teslan-draw {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes teslan-map-pulse {
+      0%, 100% { filter: drop-shadow(0 0 0 rgba(43,196,217,0)); transform: scale(1); }
+      50% { filter: drop-shadow(0 0 10px rgba(43,196,217,0.7)); transform: scale(1.12); }
+    }
+    @media (max-width: 760px) {
+      .hero-network { opacity: 0.38; }
+    }
   </style>
 </head>
 <body>

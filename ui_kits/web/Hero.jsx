@@ -3,6 +3,7 @@ function Hero() {
     <section style={heroStyles.wrap}>
       <div style={heroStyles.bg} />
       <div style={heroStyles.wash} />
+      <HeroNetwork />
       <div style={heroStyles.inner}>
         <div style={heroStyles.content}>
           <div style={heroStyles.eyebrow}>Norte de Chile · Proyectos en terreno</div>
@@ -22,6 +23,38 @@ function Hero() {
   );
 }
 
+function HeroNetwork() {
+  const nodes = [
+    [800, 90], [980, 170], [1110, 300], [900, 430], [690, 320], [1060, 70],
+  ];
+  return (
+    <svg className="hero-network" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="heroSignal" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#2BC4D9" stopOpacity="0.1" />
+          <stop offset="50%" stopColor="#9AD3F4" stopOpacity="0.85" />
+          <stop offset="100%" stopColor="#E87824" stopOpacity="0.55" />
+        </linearGradient>
+        <radialGradient id="heroNode" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="45%" stopColor="#2BC4D9" />
+          <stop offset="100%" stopColor="#2BC4D9" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <path d="M690 320 C780 190 880 120 980 170 S1100 260 1110 300 S980 430 900 430 S770 380 690 320" fill="none" stroke="url(#heroSignal)" strokeWidth="1.6" />
+      <path d="M800 90 C880 120 930 140 980 170 C1030 205 1075 250 1110 300" fill="none" stroke="url(#heroSignal)" strokeWidth="1.2" />
+      <path d="M1060 70 C1045 120 1020 150 980 170" fill="none" stroke="url(#heroSignal)" strokeWidth="1.2" />
+      {nodes.map(([x, y], i) => (
+        <g key={`${x}-${y}`}>
+          <circle className="signal-ring" cx={x} cy={y} r="14" fill="none" stroke="#2BC4D9" strokeWidth="1" style={{animationDelay: `${i * 0.35}s`}} />
+          <circle cx={x} cy={y} r="8" fill="url(#heroNode)" />
+          <circle cx={x} cy={y} r="2.4" fill="#fff" />
+        </g>
+      ))}
+    </svg>
+  );
+}
+
 const heroStyles = {
   wrap: { position: 'relative', minHeight: 560, overflow: 'hidden', color: '#fff' },
   bg: { position: 'absolute', inset: 0, backgroundImage: "url('https://images.pexels.com/photos/442152/pexels-photo-442152.jpeg?auto=compress&cs=tinysrgb&w=1800')", backgroundSize: 'cover', backgroundPosition: 'center' },
@@ -37,4 +70,4 @@ const heroStyles = {
   secondary: { background: 'transparent', color: '#fff', border: '1.5px solid rgba(255,255,255,0.45)', padding: '14px 26px', borderRadius: 999, fontWeight: 600, fontSize: 15, cursor: 'pointer', fontFamily: 'inherit' },
 };
 
-Object.assign(window, { Hero });
+Object.assign(window, { Hero, HeroNetwork });

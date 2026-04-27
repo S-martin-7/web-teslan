@@ -27,16 +27,23 @@ function CoverageMap() {
           <button style={cmStyles.primary}>Ver cobertura y proyectos →</button>
         </div>
         <div style={cmStyles.right}>
-          <svg viewBox="0 0 260 360" style={{width: '100%', maxWidth: 260, height: 'auto'}}>
+          <svg viewBox="0 0 260 360" style={{width: '100%', maxWidth: 260, height: 'auto'}} aria-hidden="true">
+            <defs>
+              <linearGradient id="mapSignal" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#2BC4D9" stopOpacity="0.18" />
+                <stop offset="60%" stopColor="#2BC4D9" />
+                <stop offset="100%" stopColor="#E87824" stopOpacity="0.75" />
+              </linearGradient>
+            </defs>
             {/* vertical Chile-ish coast line */}
-            <path d="M130,10 Q150,90 135,170 Q120,250 145,350" stroke="rgba(43,196,217,0.35)" strokeWidth="1.5" fill="none" strokeDasharray="2 4"/>
+            <path className="map-route" d="M130,10 Q150,90 135,170 Q120,250 145,350" stroke="url(#mapSignal)" strokeWidth="2" fill="none"/>
             {cities.map((c, i) => {
               const y = 40 + i * 60;
               const x = 130 + (i % 2 === 0 ? -4 : 6);
               return (
                 <g key={c}>
-                  <circle cx={x} cy={y} r="5" fill="#2BC4D9" />
-                  <circle cx={x} cy={y} r="12" fill="none" stroke="rgba(43,196,217,0.3)" />
+                  <circle className="map-node" cx={x} cy={y} r="5" fill="#2BC4D9" />
+                  <circle className="signal-ring" cx={x} cy={y} r="12" fill="none" stroke="rgba(43,196,217,0.35)" style={{animationDelay: `${i * 0.35}s`}} />
                   <line x1={x+14} y1={y} x2={x+40} y2={y} stroke="rgba(255,255,255,0.25)" strokeWidth="1"/>
                   <text x={x+46} y={y+4} fill="#fff" fontSize="13" fontWeight="600">{c}</text>
                 </g>
